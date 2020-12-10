@@ -1,0 +1,8 @@
+[submodule "blobmoji"]
+	path = blobmoji
+	url = https://github.com/C1710/blobmoji
+	branch = master
+[submodule "discordemojimap"]
+	path = discordemojimap
+	url = https://github.com/Bios-Marcel/discordemojimap/
+	branch = master
