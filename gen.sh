@@ -27,7 +27,7 @@ if ! has go; then echo "go missing, using pre-generated mapping.go"; else
 	fi
 fi
 cd "${gitd}"
-cp mapping.go "${gitd}" && cd "${gitd}"
+cp ./discordemojimap/mapping.go "${gitd}" && cd "${gitd}"
 if [ "$PWD" != "${gitd}" ]; then
 	if [ -d "${gitd}" ];then  
         	cd "${gitd}"
