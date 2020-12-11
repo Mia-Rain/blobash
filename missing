@@ -606,65 +606,7 @@ ERORR: File for flag_sj missing or unmapped!!! blobmoji/png/128/emoji_u1f1f8_1f1
 ERORR: File for flag_ta missing or unmapped!!! blobmoji/png/128/emoji_u1f1f9_1f1e6.png Is Missing
 ERORR: File for flag_um missing or unmapped!!! blobmoji/png/128/emoji_u1f1fa_1f1f2.png Is Missing
 ERORR: File for united_nations missing or unmapped!!! blobmoji/png/128/emoji_u1f1fa_1f1f3.png Is Missing
-grep: unrecognized option: 1
-BusyBox v1.31.1 () multi-call binary.
-
-Usage: grep [-HhnlLoqvsriwFE] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...
-
-Search for PATTERN in FILEs (or stdin)
-
-	-H	Add 'filename:' prefix
-	-h	Do not add 'filename:' prefix
-	-n	Add 'line_no:' prefix
-	-l	Show only names of files that match
-	-L	Show only names of files that don't match
-	-c	Show only count of matching lines
-	-o	Show only the matching part of line
-	-q	Quiet. Return 0 if PATTERN is found, 1 otherwise
-	-v	Select non-matching lines
-	-s	Suppress open and read errors
-	-r	Recurse
-	-i	Ignore case
-	-w	Match whole words only
-	-x	Match whole lines only
-	-F	PATTERN is a literal (not regexp)
-	-E	PATTERN is an extended regexp
-	-m N	Match up to N times per file
-	-A N	Print N lines of trailing context
-	-B N	Print N lines of leading context
-	-C N	Same as '-A N -B N'
-	-e PTRN	Pattern to match
-	-f FILE	Read pattern from file
-ERORR: File for -1 missing or unmapped!!!
-grep: unrecognized option: 1
-BusyBox v1.31.1 () multi-call binary.
-
-Usage: grep [-HhnlLoqvsriwFE] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...
-
-Search for PATTERN in FILEs (or stdin)
-
-	-H	Add 'filename:' prefix
-	-h	Do not add 'filename:' prefix
-	-n	Add 'line_no:' prefix
-	-l	Show only names of files that match
-	-L	Show only names of files that don't match
-	-c	Show only count of matching lines
-	-o	Show only the matching part of line
-	-q	Quiet. Return 0 if PATTERN is found, 1 otherwise
-	-v	Select non-matching lines
-	-s	Suppress open and read errors
-	-r	Recurse
-	-i	Ignore case
-	-w	Match whole words only
-	-x	Match whole lines only
-	-F	PATTERN is a literal (not regexp)
-	-E	PATTERN is an extended regexp
-	-m N	Match up to N times per file
-	-A N	Print N lines of trailing context
-	-B N	Print N lines of leading context
-	-C N	Same as '-A N -B N'
-	-e PTRN	Pattern to match
-	-f FILE	Read pattern from file blobmoji/png/128/emoji_.png Is Missing
+??? - Blobmoji/png/128/emoji_.png Is Missing
 ERORR: File for fist_tone1 missing or unmapped!!! blobmoji/png/128/emoji_u270au1f3fb.png Is Missing
 ERORR: File for fist_tone2 missing or unmapped!!! blobmoji/png/128/emoji_u270au1f3fc.png Is Missing
 ERORR: File for fist_tone3 missing or unmapped!!! blobmoji/png/128/emoji_u270au1f3fd.png Is Missing
@@ -1513,7 +1455,7 @@ ERORR: File for hash missing or unmapped!!! blobmoji/png/128/emoji_#u20e3.png Is
 ERORR: File for asterisk missing or unmapped!!!
 ERORR: File for keycap_asterisk missing or unmapped!!!
 ERORR: File for infinity missing or unmapped!!! blobmoji/png/128/emoji_u267e.png Is Missing
-r unmapped!!! blobmoji/png/128/emoji_6u20e3.png Is Missing
+??? - blobmoji/png/128/emoji_6u20e3.png Is Missing
 ERORR: File for seven missing or unmapped!!! blobmoji/png/128/emoji_7u20e3.png Is Missing
 ERORR: File for eight missing or unmapped!!! blobmoji/png/128/emoji_8u20e3.png Is Missing
 ERORR: File for nine missing or unmapped!!! blobmoji/png/128/emoji_9u20e3.png Is Missing
