@@ -23,6 +23,7 @@
 ***
   Blobash was created as a `poc` (proof of concept), to show that using golang for scripting is overkill.\
   CSS content was stolen from [disblob](https://github.com/diamondburned/disblob) (Which is written in golang :rage:)
+  
 [![I hate golang](https://github-readme-stats.vercel.app/api/pin/?username=diamondburned&repo=disblob)](https://github.com/diamondburned/disblob)
 ***
   Generating the CSS is very simple, and only requires `busybox` + `git`.
