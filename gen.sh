@@ -7,7 +7,7 @@ has() {
         esac
 }
 cd "${gitd}"
-if [ -d ./discordemojimap ]; then cd ./discordemojimap; elif has git; then git submodule update --init && cd ./discordemojimap; else 
+if [ -f ./discordemojimap/mapping.go ]; then cd ./discordemojimap; elif has git; then git submodule update --init && cd ./discordemojimap; else 
 	echo "FAIL, git missing, please find your own way to download the submods"; exit 1 # git isn't ""REALLY"" needed, you just have to trick the script into finding the submods
 fi
 if ! has go; then echo "go missing, using pre-generated mapping.go"; else
