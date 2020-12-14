@@ -28,9 +28,7 @@ if ! has go; then echo "go missing, using pre-generated mapping.go"; else
 fi
 cd "${gitd}"
 cp ./discordemojimap/mapping.go ./
-
-sed -e '/u/,$!d' -e '0,/string/d' -e 's/"//g' -e 's/:[[:space:]]/=/g' -e '0,/{$/d' -e 's/\\ufe0f//g' -e 's/\\//g' -e 's/,//g' -e 's/u200d/_200d/g' -e 's/\t//g' -e 's/}//g' -e '/^$/d' -e 's/U0001/u1/' -e 's/U0001/_1/g' -i ./mapping.go
-
+sed -e '/u/,$!d' -e 's/"//g' -e 's/:[[:space:]]/=/g' -e 's/\\ufe0f//g' -e 's/\\//g' -e 's/,//g' -e 's/u200d/_200d/g' -e 's/\t//g' -e 's/}//g' -e '/^$/d' -e 's/U0001/u1/' -e 's/U0001/_1/g' -i ./mapping.go
 map=$(pwd)/mapping.go
 sed 's/=.*/=/g' "${map}" > map-names
 while IFS='=' read -r name val; do # Thx Perish :)
