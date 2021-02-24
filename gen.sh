@@ -12,7 +12,7 @@ if [ -f ./discordemojimap/mapping.go ]; then cd ./discordemojimap; elif has git;
 fi
 if ! has go; then echo "go missing, using pre-generated mapping.go"; else
 	if [ "${update}" != no ]; then
-        	for i in $(echo "curl wget"); do
+        	for i in curl wget; do
                 	if has "$i"; then
                         	case "$i" in
                                 	curl)
@@ -27,8 +27,8 @@ if ! has go; then echo "go missing, using pre-generated mapping.go"; else
 fi
 cd "${gitd}"
 cp ./discordemojimap/mapping.go ./
-if ! has sed; then echo "sed NOT FOUND!!"; exit 1; done
-sed -e '/u/,$!d' -e 's/"//g' -e 's/:[[:space:]]/=/g' -e 's/\\ufe0f//g' -e 's/\\//g' -e 's/,//g' -e 's/u200d/_200d/g' -e 's/\t//g' -e 's/}//g' -e '/^$/d' -e 's/U0001/u1/' -e 's/U0001/_1/g' -i ./mapping.go
+if ! has sed; then echo "sed NOT FOUND!!"; exit 1; fi
+sed -e '/u/,$!d' -e 's/"//g' -e 's/:[[:space:]]/=/g' -e 's/\\//g' -e 's/,//g' -e 's/\t//g' -e 's/}//g' -e '/^$/d' -i ./mapping.go
 while IFS='=' read -r name val; do # Thx Perish :)
 	echo ${val}
 	if [ ! -f "blobmoji/png/128/emoji_${val}.png" ]; then echo "ERORR: File for ${name} missing or unmapped!!!" >> /dev/stderr; fi # This is what I figure the best way to print to stderr - idk if it's portable though
