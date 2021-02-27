@@ -9,7 +9,6 @@ has() {
 cd "${gitd}"
 if [ ! -f ./discordemojimap/mapping.go ]; then if has git; then git submodule update --init; else echo "FAIL, git missing, please find your own way to download the submods"; exit 1;fi;fi
 # git isn't ""REALLY"" needed, you just have to trick the script into finding the submods
-cp ./discordemojimap/mapping.go ./
 if ! has sed; then echo "sed NOT FOUND!!"; exit 1; fi
 sed -e '/\/\//d' -e '/u/,$!d' -e 's/"//g' -e 's/:[[:space:]]/=/g' -e 's/\\//g' -e 's/,//g' -e 's/\t//g' -e 's/}//g' -e '/^$/d' -i ./mapping.go
 while IFS='=' read -r name val; do # Thx Perish :)
