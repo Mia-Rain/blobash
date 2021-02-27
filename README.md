@@ -1,38 +1,34 @@
 # Blobash
   ~ Stylesheet generator for Blobmoji with Discord, in 100% POSIX shell
 ***
-  Blobash's test build was preformed using `dash`, with busybox coreutils.\
-  If you simply want to test this project you can inject the following JS
-  ```js
-["https://cdn.discordapp.com/attachments/699685435198144553/786841908126810122/style_part00.css","https://cdn.discordapp.com/attachments/699685435198144553/786841908173078528/style_part01.css","https://cdn.discordapp.com/attachments/699685435198144553/786841903848488960/style_part02.css","https://cdn.discordapp.com/attachments/699685435198144553/786841904209461278/style_part03.css","https://cdn.discordapp.com/attachments/699685435198144553/786840312185487380/style_part04.css"].forEach(function(i) {
-    var link = document.createElement("link");
-    link.href = i;
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    document.getElementsByTagName("head")[0].appendChild(link);
-});
-  ```
-  or this CSS
-  ```css
-@import url("https://cdn.discordapp.com/attachments/699685435198144553/786841908126810122/style_part00.css");
-@import url("https://cdn.discordapp.com/attachments/699685435198144553/786841908173078528/style_part01.css");
-@import url("https://cdn.discordapp.com/attachments/699685435198144553/786841903848488960/style_part02.css");
-@import url("https://cdn.discordapp.com/attachments/699685435198144553/786841904209461278/style_part03.css");
-@import url("https://cdn.discordapp.com/attachments/699685435198144553/786840312185487380/style_part04.css");
-  ```
+  Blobash is built around being as portable as possible.  
+  And only requires busybox utils (or GNU coreutils if ur into that)  
+  As well as some kind of way to obtain the git repo, and it's submodules, such as `git`, `curl`, or even `wget` (if your into that)  
 ***
-  Blobash was created as a `poc` (proof of concept), to show that using golang for scripting is overkill.\
-  CSS content was stolen from [disblob](https://github.com/diamondburned/disblob) (Which is written in golang :rage:)
-  
-[![I hate golang](https://github-readme-stats.vercel.app/api/pin/?username=diamondburned&repo=disblob)](https://github.com/diamondburned/disblob)
+  Blobash was created as a `poc` (proof of concept), to prove that every lang has it's place.  
+  Golang is a great lang, but generating CSS is very simple and can be done easily with a low-level scripting lang, such as POSIX sh.  
+
+---
+
+  CSS content was stolen from [disblob](https://github.com/diamondburned/disblob)  
+
+[![I don't hate golang, anymore](https://github-readme-stats.vercel.app/api/pin/?username=diamondburned&repo=disblob)](https://github.com/diamondburned/disblob)
 ***
   Generating the CSS is very simple, and only requires `busybox` + `git`.
   ```sh
-$ git clone https://github.com/ThatGeekyWeeb/blobash
-$ git submodule update --init
-$ sh gen.sh # export 'update=no' to disable requirement of curl or wget
+$ git clone https://github.com/ThatGeekyWeeb/blobash.git # --recursive 
+# in theory --recursive would be faster, but I have no way of knowing if git will clone the master branch for the submodules
+$ cd blobash
+$ git clone https://github.com/ThatGeekyWeeb/discordemojimap.git ./discordemojimap
+$ git clone https://github.com/C1710/blobmoji.git --depth 1 ./blobmoji
+$ sh gen.sh
   ```
 ***
-  <sup>My script is about 60 lines of code, disblob is +700 lines</sup><br>
-  <sup>And is on par with the usability of disblob</sup><br>
-  <sup>(Some emojis don't link, this is due to filename issues, I might fix these in the future)</sup><br>
+  If your annoying and just want the CSS, use the following...
+```css
+@import url("https://cdn.discordapp.com/attachments/699685435198144553/815166251705696266/style_part00.css");
+@import url("https://cdn.discordapp.com/attachments/699685435198144553/815166157375406090/style_part01.css");
+@import url("https://cdn.discordapp.com/attachments/699685435198144553/815167411467583528/style_part02.css");
+@import url("https://cdn.discordapp.com/attachments/699685435198144553/815166193563598848/style_part03.css");
+@import url("https://cdn.discordapp.com/attachments/699685435198144553/815167055857975296/style_part04.css");
+```
