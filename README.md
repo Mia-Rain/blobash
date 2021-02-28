@@ -11,6 +11,7 @@
 ---
 
   the mapping.go file comes from [here](https://github.com/ThatGeekyWeeb/discordemojimap/blob/13940401e356e643b5e46e05a6b3e33011c4f899/mapping.go)
+  the emojis comes from [here](https://github.com/C1710/blobmoji)
 
 ---
 
