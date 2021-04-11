@@ -23,7 +23,6 @@
 $ git clone https://github.com/ThatGeekyWeeb/blobash.git # --recursive 
 # in theory --recursive would be faster, but I have no way of knowing if git will clone the master branch for the submodules
 $ cd blobash
-$ git clone https://github.com/ThatGeekyWeeb/discordemojimap.git ./discordemojimap
 $ git clone https://github.com/C1710/blobmoji.git --depth 1 ./blobmoji
 $ sh gen.sh
   ```
